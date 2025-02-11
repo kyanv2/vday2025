@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<title>yayy</title>
+<head>
+  <style>
+    body {
+      background-color: #FFEAEE; /* Solid pink background */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h3 {
+      color: red; /* Red text for the heading */
+      font-size: 24px; /* Same font size as before */
+      margin-top: 10px; /* Reduced the top margin to bring the text closer to the gif */
+    }
+
+    p {
+      color: red; /* Red text for the paragraph */
+      font-size: 16px; /* Original font size */
+      margin-top: 10px; /* Reduced the top margin to bring the text closer to the gif */
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #FFD6DA; /* Soft pink background */
+      color: red; /* Red text */
+      padding: 12px 24px;
+      border: 2px solid white;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px;
+      transition: all 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    /* Hover effect for the buttons - pastel color fade animation */
+    .btn:hover {
+      animation: colorFlicker 3s infinite alternate; /* Animation for color change */
+    }
+
+    @keyframes colorFlicker {
+      0% {
+        background-color: #FFD6DA; /* Soft pastel pink */
+        color: red;
+      }
+      20% {
+        background-color: #FFB3C1; /* Lighter pastel pink */
+        color: white;
+      }
+      40% {
+        background-color: #FFCCFF; /* Pastel lavender */
+        color: red;
+      }
+      60% {
+        background-color: #FFEBF5; /* Soft pastel peach */
+        color: red;
+      }
+      80% {
+        background-color: #FAD0D9; /* Very light pastel pink */
+        color: red;
+      }
+      100% {
+        background-color: #FFD6DA; /* Soft pastel pink */
+        color: red;
+      }
+    }
+
+    /* Resize the GIF */
+    img {
+      height: 250px; /* Increased size of the gif */
+      width: 250px;  /* Adjusted to a bigger size */
+      display: block;
+      margin: auto;
+      margin-bottom: 10px; /* Reduced the bottom margin to make space smaller */
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <!-- Replace 'yay.jpg' with 'yay.gif' -->
+  <img src="yay.gif" height="250" width="250" style="display: block; margin: auto;">
+  <br>
+  <h3>YIPPEEEEEEEEEEEEEE ＼(≧▽≦)／</h3>
+  <p>thank u for saying yes ! same time next year ok? hehe</p>
+  <div class="button-container">
+    <button class="btn" onclick="location.href='index.html'">ok go back neow.</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #FFEAEE; /* Solid pink background */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: red;
+    }
+
+    .heart-divider {
+      color: red;
+      font-weight: bold;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #FFD6DA;
+      color: red;
+      padding: 12px 24px;
+      border: 2px solid white;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px;
+      transition: all 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    /* Hover effect for the buttons - pastel color fade animation */
+    .btn:hover {
+      animation: colorFlicker 3s infinite alternate; /* Animation for color change */
+    }
+
+    @keyframes colorFlicker {
+      0% {
+        background-color: #FFD6DA; /* Soft pastel pink */
+        color: red;
+      }
+      20% {
+        background-color: #FFB3C1; /* Lighter pastel pink */
+        color: white;
+      }
+      40% {
+        background-color: #FFCCFF; /* Pastel lavender */
+        color: red;
+      }
+      60% {
+        background-color: #FFEBF5; /* Soft pastel peach */
+        color: red;
+      }
+      80% {
+        background-color: #FAD0D9; /* Very light pastel pink */
+        color: red;
+      }
+      100% {
+        background-color: #FFD6DA; /* Soft pastel pink */
+        color: red;
+      }
+    }
+
+    /* Resize the GIF */
+    img {
+      height: 150px; /* Reduced size of the gif */
+      width: 150px;  /* Adjusted to a smaller size */
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <img src="heart.gif" height="150" width="150" style="display: block; margin: auto;">
+  <br>
+  <div class="heart-divider">‧₊˚ ‿︵‿︵୨୧ ˗ˏˋ ꒰ ♡ ꒱ ˎˊ˗ ୨୧‿︵‿︵ ˚₊</div>
+  <h2>will you be my valentine? ♡</h2>
+
+  <div class="button-container">
+    <button class="btn" onclick="location.href='yes.html'">yes ofc ily ≧◡≦</button>
+    <button class="btn" onclick="location.href='no.html'">no i hate u</button>
+  </div>
+</body>
+</html>
