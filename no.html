@@ -2,30 +2,30 @@
 <title>booooo</title>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- other head content like title, styles, etc. -->
+
 </head>
   <style>
     body {
-      background-color: black; /* Black background */
+      background-color: black;
       margin: 0;
       padding: 0;
       text-align: center;
       font-family: 'Arial', sans-serif;
-      color: #EAEAEA; /* Light gray text for contrast */
+      color: #EAEAEA; 
     }
 
     h2 {
-      color: #FF0000; /* Bright red for the heading */
-      font-size: 36px; /* Larger text for extra dramatic effect */
+      color: #FF0000;
+      font-size: 36px; 
       margin-top: 10px;
-      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Stronger, creepier text shadow */
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); 
     }
 
     p {
-      color: #FF0000; /* Bright red for the message */
+      color: #FF0000; 
       font-size: 20px;
       margin-top: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Subtle text shadow for an eerie effect */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); 
     }
 
     .button-container {
@@ -33,22 +33,22 @@
     }
 
     .btn {
-      background: linear-gradient(145deg, #FF4D4D, #FF0000); /* Bright red gradient */
-      color: #EAEAEA; /* Light gray text */
+      background: linear-gradient(145deg, #FF4D4D, #FF0000); 
+      color: #EAEAEA;
       padding: 14px 28px;
-      border: 2px solid #D60000; /* Darker red border */
+      border: 2px solid #D60000; 
       border-radius: 25px;
       cursor: pointer;
       font-size: 18px;
       font-weight: bold;
       margin: 10px;
       transition: all 0.5s ease-in-out;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
     }
 
     .btn:hover {
       animation: bloodPulse 2s infinite alternate;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Glowing red shadow on hover */
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); 
     }
 
     @keyframes bloodPulse {
@@ -57,26 +57,26 @@
         color: #EAEAEA;
       }
       50% {
-        background: linear-gradient(145deg, #FF6666, #FF4D4D); /* Brighter blood red */
+        background: linear-gradient(145deg, #FF6666, #FF4D4D); 
         color: white;
       }
       100% {
-        background: linear-gradient(145deg, #FF0000, #FF4D4D); /* Bright red */
+        background: linear-gradient(145deg, #FF0000, #FF4D4D); 
         color: white;
       }
     }
 
-    /* Resize the GIF */
+    
     img {
-      height: 250px; /* Adjusted size */
-      width: 250px;  /* Adjusted size */
+      height: 250px; 
+      width: 250px;  
       display: block;
       margin: auto;
       margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adding more shadow to the image */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
 
-    /* Position of buttons */
+ 
     .dynamic-btn {
       position: absolute;
       z-index: 1;
@@ -100,38 +100,38 @@
 
   </style>
   <script>
-    let noButtonClicks = 0; // Counter for "No" button clicks
-    let yesButtonSize = 1; // Variable to track size of the "Yes" button
+    let noButtonClicks = 0; 
+    let yesButtonSize = 1; 
 
     function growYesButton() {
-      yesButtonSize += 0.1; // Increase size on each "No" click
-      document.getElementById('yesButton').style.transform = `scale(${yesButtonSize})`; // Apply scaling
+      yesButtonSize += 0.1; 
+      document.getElementById('yesButton').style.transform = `scale(${yesButtonSize})`; 
     }
 
     function showNoEscapeMessage() {
       alert("You cannot escape. There is no way out. You must say yes.");
       noButtonClicks++;
 
-      // After 3 clicks, hide the "No" button and start creating new "Yes" buttons
+    
       if (noButtonClicks >= 3) {
-        document.getElementById('noButton').style.display = 'none'; // Hide the "No" button
+        document.getElementById('noButton').style.display = 'none'; 
 
-        // Generate multiple "Yes" buttons and cover the screen
+     
         let container = document.querySelector('.button-container');
-        for (let i = 0; i < 20; i++) { // Adjust this number to generate more or fewer buttons
+        for (let i = 0; i < 20; i++) { 
           let newButton = document.createElement('button');
           newButton.classList.add('btn', 'dynamic-btn');
           newButton.innerText = 'YES.';
-          newButton.style.top = `${Math.random() * 100}%`; // Randomize position on screen
-          newButton.style.left = `${Math.random() * 100}%`; // Randomize position on screen
+          newButton.style.top = `${Math.random() * 100}%`; 
+          newButton.style.left = `${Math.random() * 100}%`;
           newButton.onclick = function () {
-            location.href = 'yes.html'; // All buttons lead to the "yes" page
+            location.href = 'yes.html'; 
           };
           container.appendChild(newButton);
         }
       }
 
-      growYesButton(); // Increase "Yes" button size on each "No" click
+      growYesButton(); 
     }
   </script>
 </head>
